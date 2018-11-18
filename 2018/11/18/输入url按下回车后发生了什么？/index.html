@@ -79,14 +79,17 @@
 
 
 
+<meta name="description" content="—1. URL解析当在浏览器中输入URL后，浏览器首先对拿到的URL进行识别，抽取出域名字段.  2. 域名解析域名解析时，会经历以下步骤： 查询浏览器缓存（浏览器会缓存之前拿到的DNS 2-30分钟时间），如果没有找到，则会 检查系统缓存，检查hosts文件，这个文件保存了一些以前访问过的网站的域名和IP的数据。它就像是一个本地的数据库。如果找到就可以直接获取目标主机的IP地址了。没有找到的话，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="软妹">
-<meta property="og:url" content="http://yoursite.com/2018/11/13/软妹-1/index.html">
+<meta property="og:title" content="输入url按下回车后发生了什么？">
+<meta property="og:url" content="http://yoursite.com/2018/11/18/输入url按下回车后发生了什么？/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="—1. URL解析当在浏览器中输入URL后，浏览器首先对拿到的URL进行识别，抽取出域名字段.  2. 域名解析域名解析时，会经历以下步骤： 查询浏览器缓存（浏览器会缓存之前拿到的DNS 2-30分钟时间），如果没有找到，则会 检查系统缓存，检查hosts文件，这个文件保存了一些以前访问过的网站的域名和IP的数据。它就像是一个本地的数据库。如果找到就可以直接获取目标主机的IP地址了。没有找到的话，">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-13T10:59:14.680Z">
+<meta property="og:updated_time" content="2018-11-18T13:38:10.460Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="软妹">
+<meta name="twitter:title" content="输入url按下回车后发生了什么？">
+<meta name="twitter:description" content="—1. URL解析当在浏览器中输入URL后，浏览器首先对拿到的URL进行识别，抽取出域名字段.  2. 域名解析域名解析时，会经历以下步骤： 查询浏览器缓存（浏览器会缓存之前拿到的DNS 2-30分钟时间），如果没有找到，则会 检查系统缓存，检查hosts文件，这个文件保存了一些以前访问过的网站的域名和IP的数据。它就像是一个本地的数据库。如果找到就可以直接获取目标主机的IP地址了。没有找到的话，">
 
 
 
@@ -116,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/13/软妹-1/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/18/输入url按下回车后发生了什么？/">
 
 
 
 
 
-  <title>软妹 | Hexo</title>
+  <title>输入url按下回车后发生了什么？ | Hexo</title>
   
 
 
@@ -229,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/13/软妹-1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/18/输入url按下回车后发生了什么？/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -246,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">软妹</h1>
+          <h1 class="post-title" itemprop="name headline">输入url按下回车后发生了什么？</h1>
         
 
         <div class="post-meta">
@@ -258,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-13T18:59:14+08:00">
-                2018-11-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-18T21:37:51+08:00">
+                2018-11-18
               </time>
             
 
@@ -296,7 +299,32 @@
       
 
       
-        
+        <p>—<mark>1. URL解析</mark><br>当在浏览器中输入URL后，浏览器首先对拿到的URL进行识别，抽取出域名字段.</p>
+<hr>
+<p><mark>2. 域名解析</mark><br>域名解析时，会经历以下步骤：</p>
+<p><strong>查询浏览器缓存</strong>（浏览器会缓存之前拿到的DNS 2-30分钟时间），如果没有找到，则会</p>
+<p><strong>检查系统缓存</strong>，检查hosts文件，这个文件保存了一些以前访问过的网站的域名和IP的数据。它就像是一个本地的数据库。如果找到就可以直接获取目标主机的IP地址了。没有找到的话，需要</p>
+<p><strong>检查路由器缓存</strong>，路由器有自己的DNS缓存，可能就包括了这在查询的内容；如果没有，要</p>
+<p><strong>查询ISP DNS 缓存</strong>：ISP服务商DNS缓存（本地服务器缓存）那里可能有相关的内容，如果还不行的话，需要，</p>
+<p><strong>递归查询</strong>：从根域名服务器到顶级域名服务器再到极限域名服务器依次搜索哦对应目标域名的IP。</p>
+<p>通过以上的查找，就可以获取到域名对应的IP了。</p>
+<hr>
+<p><mark>3. 三次握手</mark>(向该IP地址定位的HTTP服务器发起TCP连接)</p>
+<p><strong>第一次握手</strong>：客户端向服务器端发送请求（SYN=1） 等待服务器确认；</p>
+<p><strong>第二次握手</strong>：服务器收到请求并确认，回复一个指令（SYN=1，ACK=1）；</p>
+<p><strong>第三次握手</strong>：客户端收到服务器的回复指令并返回确认（ACK=1）。</p>
+<hr>
+<p><mark>4. web服务器接收请求，交给相关进程处理</mark></p>
+<p>这里要根据后台语言不同而分情况处理，web服务器接收请求后 找到服务器上相对应的文件.<br>TCP/IP连接建立起来以后，浏览器就可以向服务器发送HTTP请求了；</p>
+<hr>
+<p><mark>5.服务器端接受到了这个请求后，根据路径参数，经过后端的一些处理之后，把处理后的结果返回给浏览器；</mark></p>
+<hr>
+<p><mark> 6. 浏览器拿到了完整的HTML页面代码或者其他的数据结果后，浏览器开始下载HTML文档，同时设置缓存并关闭TCP连接。</mark><br>    <strong>第一次挥手</strong>客户端告诉服务端，数据已经发送完毕，准备要断开连接了！<br>    <strong>第二次挥手</strong>服务端告诉客户端，我已经收到了你算开链接的请求，但是数据还没有发送完，发送完我会告诉你。<br>    <strong>第三次挥手</strong>服务端告诉客户端，我的数据已经发送完毕，你下一次挥手我就知道你断开了连接，我也会马上断开了。<br>    <strong>第四次挥手</strong>客户端告诉服务端，好的 我断开了</p>
+<hr>
+<p><mark>7. 浏览器接受响应，并展示在网页上</mark><br>a. 浏览器会，然后生成DOM树，<br>b. 解析CSS文件生成CSSOM树<br>c. CSS和DOM组合形成渲染树，<br>d. 浏览器根据渲染树将页面绘制在屏幕上。</p>
+<p>浏览器根据拿到的资源对页面进行渲染，最终把一个完整的页面呈现给用户。</p>
+<pre><code>雪儿*
+</code></pre>
       
     </div>
     
@@ -320,8 +348,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/31/我的第一篇博客/" rel="next" title="我的第一篇博客">
-                <i class="fa fa-chevron-left"></i> 我的第一篇博客
+              <a href="/2018/11/18/输入url并按下回车后？/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
@@ -329,10 +357,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/13/初识http/" rel="prev" title="初识http">
-                初识http <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
